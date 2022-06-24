@@ -1,0 +1,11 @@
+- hosts: web
+  vars_files:
+
+  tasks:
+    - name: install
+      ansible.builtin.apt:
+        name: sudo
+        state: present
+        update_cache: yes
+
+    - name: add {{}} to sudo
